@@ -16,9 +16,9 @@ void q1(int a1, int b1, int c1, int a2, int b2, int c2){
 void q2(char string[], int size){
     int digits=0, chars=0;
     for(int i=0; i<size; i++){
-        int curr = string[i] - '0';
-        if(curr>=0 && curr<=9) digits++;
-        else if (curr>='a'-'0' && curr<='z'-'0') chars++;
+        int curr = string[i];
+        if(curr>='0' && curr<='9') digits++;
+        else if (curr>='a' && curr<='z') chars++;
     }
     printf("Digits: %d, Letters: %d\n", digits, chars);
 }
@@ -54,7 +54,7 @@ int main(void){
     putchar('\n');
 
     printf("Question 2\n");
-    char q2Input[] = "hello boy 1234 dfa";
+    char q2Input[] = "hello boy 1234 dfa  123";
     q2(q2Input, len(q2Input));
     putchar('\n');
 
